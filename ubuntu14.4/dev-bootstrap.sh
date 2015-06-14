@@ -27,6 +27,9 @@ chmod +x /etc/profile.d/node.sh
 echo 'PATH=$PATH:/usr/share/maven/bin' > /etc/profile.d/maven.sh
 chmod +x /etc/profile.d/maven.sh
 
+# hack to be ubunutu 12.04 as ambari 2.0 has not support ubunutu 14.04 yet
+#sed -e "s/14.04/12.04/g" -i /etc/*-release
+
 # check out Ambari source
 
 echo 'Ambari Development VM has been set up! Enjoy!'
